@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Plate Reviews</title>
+</head>
+
+<body>
+<header>
+    <h1> A list of Paper Plate Reviews</h1>
+</header>
+
+<main>
+        <ul>
+            <li th:each="review: ${reviewModel}">
+            <a th:href="@{/review(reviewId=${review.reviewId})}"  th:text="${review.reviewTitle}"></a></li>
+           </ul>
+</main>
+
+<footer>
+    <p> &copy Cassandra Amos 2020</p>
+</footer>
+
+</body>
+
+</html>

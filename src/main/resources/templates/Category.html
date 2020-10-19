@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>PaperPlateCategories</title>
+</head>
+
+<body>
+<main>
+        <p th:text="'Here are the review categories.'"/>
+        <p th:text="'Click' +${reviewModel.reviewCategory} + 'For details of the selected category.'"/>
+        <ol>
+
+        </ol>
+
+    <div class="category__container">
+        <h3 class="category">Product category:</h3>
+        <p id="Review-info2" th:text="${reviewModel.reviewCategory}"></p>
+    </div>
+
+
+</main>
+
+</body>
+</html>
+
+
+<!--<body>-->
+
+
+<!--<main>-->
+<!--    <p th:text="'This is the review for' + ${name} + '.'"/>-->
+<!--    <ol>-->
+<!--    </ol>-->
+<!--</main>-->
+
+<!--</body>-->
+
+<!--</html>-->

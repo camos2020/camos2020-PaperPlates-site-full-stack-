@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="${reviewModel.reviewTitle}">C Amos- Paper Plate Review</title>
+</head>
+
+<body>
+<header>
+    <h1 th:text="${reviewModel.reviewTitle}">Paper Plate Review</h1>
+</header>
+
+<main>
+    <h2>
+    <ol>
+        <p><a href="/reviews">Reviews</a></p>
+        <li th:text="'Product review number ---:   #' + ${reviewModel.reviewId}"> </li>
+    </ol>
+    </h2>
+    <div class="date__container">
+        <h3 class="date__headline">Date of product review:</h3>
+        <p id="Review-info1" th:text="${reviewModel.date}"></p>
+    </div>
+
+    <div class="category__container">
+        <h3 class="category">Product category:</h3>
+        <p id="Review-info2" th:text="${reviewModel.reviewCategory}"></p>
+    </div>
+
+    <div class="rating__container">
+        <h3 class="category">Overall product rating:</h3>
+        <p id="Review-info3" th:text= "${reviewModel.reviewRating}"></p>
+    </div>
+
+    <div class="product-review__container">
+        <h3 class="category">Review content:</h3>
+        <p id="Review-info4" th:text="${reviewModel.reviewContent}"></p>
+    </div>
+
+    <div class="reviewPic__container">
+        <h3 class="pic">Review pictures:</h3>
+        <p id="Review-info5" th:src="${reviewModel.pics}"></p>
+    </div>
+
+
+
+</main>
+
+<footer>
+    <p> &copy Cassandra Amos 2020</p>
+</footer>
+
+</body>
+</html>
